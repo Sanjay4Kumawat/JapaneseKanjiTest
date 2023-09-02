@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Vocabulary Quiz</title>
+    <style>
+        /* CSS for Japanese Vocabulary Quiz */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style the result container */
+        #resultContainer {
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style correct and incorrect answers */
+        .correct-answer {
+            color: #28a745; /* Green color for correct answers */
+            font-weight: bold;
+        }
+
+        .incorrect-answer {
+            color: #dc3545; /* Red color for incorrect answers */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Japanese Vocabulary Quiz</h1>
+        <form id="quizForm">
+            <!-- Question 1 -->
+        <div class="question">
+            <p>1. What do we call "辺"?</p>
+            <input type="radio" name="q1" value="a"> a) あたり<br>
+            <input type="radio" name="q1" value="b"> b) いち<br>
+            <input type="radio" name="q1" value="c"> c) いと<br>
+            <input type="radio" name="q1" value="d"> d) いのち<br>
+        </div>
+
+            
+            <!-- Question 2 -->
+        <div class="question">
+            <p>2. What is the meaning of "市"?</p>
+            <input type="radio" name="q2" value="a"> a) いわ<br>
+            <input type="radio" name="q2" value="b"> b) くさ<br>
+            <input type="radio" name="q2" value="c"> c) いち<br>
+            <input type="radio" name="q2" value="d"> d) かた<br>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. What does "糸" mean?</p>
+            <input type="radio" name="q3" value="a"> a) こめ<br>
+            <input type="radio" name="q3" value="b"> b) いと<br>
+            <input type="radio" name="q3" value="c"> c) なげる<br>
+            <input type="radio" name="q3" value="d"> d) ね<br>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. What does "命" signify?</p>
+            <input type="radio" name="q4" value="a"> a) てら<br>
+            <input type="radio" name="q4" value="b"> b) いのち<br>
+            <input type="radio" name="q4" value="c"> c) はたけ<br>
+            <input type="radio" name="q4" value="d"> d) くも<br>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. What is the meaning of "岩"?</p>
+            <input type="radio" name="q5" value="a"> a) たま<br>
+            <input type="radio" name="q5" value="b"> b) いわ<br>
+            <input type="radio" name="q5" value="c"> c) よぶ<br>
+            <input type="radio" name="q5" value="d"> d) なく<br>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <p>6. What does "馬" represent?</p>
+            <input type="radio" name="q6" value="a"> a) くさ<br>
+            <input type="radio" name="q6" value="b"> b) うま<br>
+            <input type="radio" name="q6" value="c"> c) さけ<br>
+            <input type="radio" name="q6" value="d"> d) まど<br>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <p>7. What does "貝" refer to?</p>
+            <input type="radio" name="q7" value="a"> a) みんな<br>
+            <input type="radio" name="q7" value="b"> b) かい<br>
+            <input type="radio" name="q7" value="c"> c) こす<br>
+            <input type="radio" name="q7" value="d"> d) ころす<br>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <p>8. What does "型" mean?</p>
+            <input type="radio" name="q8" value="a"> a) くらべる<br>
+            <input type="radio" name="q8" value="b"> b) かた<br>
+            <input type="radio" name="q8" value="c"> c) むかえる<br>
+            <input type="radio" name="q8" value="d"> d) ころす<br>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <p>9. What is the meaning of "側"?</p>
+            <input type="radio" name="q9" value="a"> a) ほし<br>
+            <input type="radio" name="q9" value="b"> b) がわ<br>
+            <input type="radio" name="q9" value="c"> c) おる<br>
+            <input type="radio" name="q9" value="d"> d) こめ<br>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <p>10. What does "草" signify?</p>
+            <input type="radio" name="q10" value="a"> a) こす<br>
+            <input type="radio" name="q10" value="b"> b) ならべる<br>
+            <input type="radio" name="q10" value="c"> c) くさ<br>
+            <input type="radio" name="q10" value="d"> d) わたる<br>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <p>11. What is the meaning of "組"?</p>
+            <input type="radio" name="q11" value="a"> a) なげる<br>
+            <input type="radio" name="q11" value="b"> b) ね<br>
+            <input type="radio" name="q11" value="c"> c) くみ<br>
+            <input type="radio" name="q11" value="d"> d) はたけ<br>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <p>12. What does "雲" refer to?</p>
+            <input type="radio" name="q12" value="a"> a) さけ<br>
+            <input type="radio" name="q12" value="b"> b) くも<br>
+            <input type="radio" name="q12" value="c"> c) くさ<br>
+            <input type="radio" name="q12" value="d"> d) おちる<br>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <p>13. What is the meaning of "毛"?</p>
+            <input type="radio" name="q13" value="a"> a) おる<br>
+            <input type="radio" name="q13" value="b"> b) け<br>
+            <input type="radio" name="q13" value="c"> c) みんな<br>
+            <input type="radio" name="q13" value="d"> d) こす<br>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <p>14. What does "米" signify?</p>
+            <input type="radio" name="q14" value="a"> a) こめ<br>
+            <input type="radio" name="q14" value="b"> b) かい<br>
+            <input type="radio" name="q14" value="c"> c) わらう<br>
+            <input type="radio" name="q14" value="d"> d) よぶ<br>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question">
+            <p>15. What do we call "酒"?</p>
+            <input type="radio" name="q15" value="a"> a) さけ<br>
+            <input type="radio" name="q15" value="b"> b) たま<br>
+            <input type="radio" name="q15" value="c"> c) むかし<br>
+            <input type="radio" name="q15" value="d"> d) はたけ<br>
+        </div>
+
+        <!-- Question 16 -->
+        <div class="question">
+            <p>16. What is the meaning of "玉"?</p>
+            <input type="radio" name="q16" value="a"> a) なく<br>
+            <input type="radio" name="q16" value="b"> b) かい<br>
+            <input type="radio" name="q16" value="c"> c) たま<br>
+            <input type="radio" name="q16" value="d"> d) てら<br>
+        </div>
+
+      <!-- Question 17 -->
+        <div class="question">
+            <p>17. What does "妻" represent?</p>
+            <input type="radio" name="q17" value="a"> a) ね<br>
+            <input type="radio" name="q17" value="b"> b) かい<br>
+            <input type="radio" name="q17" value="c"> c) つま<br>
+            <input type="radio" name="q17" value="d"> d) てら<br>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question">
+            <p>18. What is the meaning of "寺"?</p>
+            <input type="radio" name="q18" value="a"> a) てら<br>
+            <input type="radio" name="q18" value="b"> b) かた<br>
+            <input type="radio" name="q18" value="c"> c) いわ<br>
+            <input type="radio" name="q18" value="d"> d) くみ<br>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question">
+            <p>19. What does "供" signify?</p>
+            <input type="radio" name="q19" value="a"> a) とも<br>
+            <input type="radio" name="q19" value="b"> b) ならべる<br>
+            <input type="radio" name="q19" value="c"> c) なげる<br>
+            <input type="radio" name="q19" value="d"> d) こす<br>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question">
+            <p>20. What is the meaning of "根"?</p>
+            <input type="radio" name="q20" value="a"> a) ほし<br>
+            <input type="radio" name="q20" value="b"> b) ね<br>
+            <input type="radio" name="q20" value="c"> c) てら<br>
+            <input type="radio" name="q20" value="d"> d) はたけ<br>
+        </div>
+
+        <!-- Question 21 -->
+        <div class="question">
+            <p>21. What do we call "葉"?</p>
+            <input type="radio" name="q21" value="a"> a) たま<br>
+            <input type="radio" name="q21" value="b"> b) は<br>
+            <input type="radio" name="q21" value="c"> c) はたけ<br>
+            <input type="radio" name="q21" value="d"> d) くさ<br>
+        </div>
+
+        <!-- Question 22 -->
+        <div class="question">
+            <p>22. What does "畑" signify?</p>
+            <input type="radio" name="q22" value="a"> a) はたけ<br>
+            <input type="radio" name="q22" value="b"> b) ならべる<br>
+            <input type="radio" name="q22" value="c"> c) みんな<br>
+            <input type="radio" name="q22" value="d"> d) おす<br>
+        </div>
+
+        <!-- Question 23 -->
+        <div class="question">
+            <p>23. What is the meaning of "星"?</p>
+            <input type="radio" name="q23" value="a"> a) ほし<br>
+            <input type="radio" name="q23" value="b"> b) さけ<br>
+            <input type="radio" name="q23" value="c"> c) おる<br>
+            <input type="radio" name="q23" value="d"> d) てら<br>
+        </div>
+
+        <!-- Question 24 -->
+        <div class="question">
+            <p>24. What do we call "窓"?</p>
+            <input type="radio" name="q24" value="a"> a) おす<br>
+            <input type="radio" name="q24" value="b"> b) わたる<br>
+            <input type="radio" name="q24" value="c"> c) むかえる<br>
+            <input type="radio" name="q24" value="d"> d) まど<br>
+        </div>
+
+        <!-- Question 25 -->
+        <div class="question">
+            <p>25. What does "皆" represent?</p>
+            <input type="radio" name="q25" value="a"> a) かい<br>
+            <input type="radio" name="q25" value="b"> b) ね<br>
+            <input type="radio" name="q25" value="c"> c) みんな<br>
+            <input type="radio" name="q25" value="d"> d) いち<br>
+        </div>
+
+        <!-- Question 26 -->
+        <div class="question">
+            <p>26. What is the meaning of "昔"?</p>
+            <input type="radio" name="q26" value="a"> a) てら<br>
+            <input type="radio" name="q26" value="b"> b) くも<br>
+            <input type="radio" name="q26" value="c"> c) むかし<br>
+            <input type="radio" name="q26" value="d"> d) かい<br>
+        </div>
+
+        <!-- Question 27 -->
+        <div class="question">
+            <p>27. What does "虫" signify?</p>
+            <input type="radio" name="q27" value="a"> a) ね<br>
+            <input type="radio" name="q27" value="b"> b) むし<br>
+            <input type="radio" name="q27" value="c"> c) くも<br>
+            <input type="radio" name="q27" value="d"> d) くさ<br>
+        </div>
+
+        <!-- Question 28 -->
+        <div class="question">
+            <p>28. What is the meaning of "雪"?</p>
+            <input type="radio" name="q28" value="a"> a) くさ<br>
+            <input type="radio" name="q28" value="b"> b) なく<br>
+            <input type="radio" name="q28" value="c"> c) ゆき<br>
+            <input type="radio" name="q28" value="d"> d) いと<br>
+        </div>
+
+        <!-- Question 29 -->
+        <div class="question">
+            <p>29. What does "打" represent?</p>
+            <input type="radio" name="q29" value="a"> a) なげる<br>
+            <input type="radio" name="q29" value="b"> b) うつ<br>
+            <input type="radio" name="q29" value="c"> c) さけ<br>
+            <input type="radio" name="q29" value="d"> d) くらべる<br>
+        </div>
+
+        <!-- Question 30 -->
+        <div class="question">
+            <p>30. What is the meaning of "押"?</p>
+            <input type="radio" name="q30" value="a"> a) おす<br>
+            <input type="radio" name="q30" value="b"> b) おる<br>
+            <input type="radio" name="q30" value="c"> c) くみ<br>
+            <input type="radio" name="q30" value="d"> d) くさ<br>
+        </div>
+
+        <!-- Question 31 -->
+        <div class="question">
+            <p>31. What does "落" signify?</p>
+            <input type="radio" name="q31" value="a"> a) くらべる<br>
+            <input type="radio" name="q31" value="b"> b) なげる<br>
+            <input type="radio" name="q31" value="c"> c) おちる<br>
+            <input type="radio" name="q31" value="d"> d) かい<br>
+        </div>
+
+        <!-- Question 32 -->
+        <div class="question">
+            <p>32. What is the meaning of "折"?</p>
+            <input type="radio" name="q32" value="a"> a) かた<br>
+            <input type="radio" name="q32" value="b"> b) おる<br>
+            <input type="radio" name="q32" value="c"> c) くらべる<br>
+            <input type="radio" name="q32" value="d"> d) ころす<br>
+        </div>
+
+       <!-- Question 33 -->
+        <div class="question">
+            <p>33. What does "比" represent?</p>
+            <input type="radio" name="q33" value="a"> a) くさ<br>
+            <input type="radio" name="q33" value="b"> b) くらべる<br>
+            <input type="radio" name="q33" value="c"> c) こす<br>
+            <input type="radio" name="q33" value="d"> d) さけ<br>
+        </div>
+
+        <!-- Question 34 -->
+        <div class="question">
+            <p>34. What is the meaning of "越"?</p>
+            <input type="radio" name="q34" value="a"> a) てら<br>
+            <input type="radio" name="q34" value="b"> b) こす<br>
+            <input type="radio" name="q34" value="c"> c) ころす<br>
+            <input type="radio" name="q34" value="d"> d) こめ<br>
+        </div>
+
+        <!-- Question 35 -->
+        <div class="question">
+            <p>35. What does "込" signify?</p>
+            <input type="radio" name="q35" value="a"> a) くらべる<br>
+            <input type="radio" name="q35" value="b"> b) こす<br>
+            <input type="radio" name="q35" value="c"> c) こめ<br>
+            <input type="radio" name="q35" value="d"> d) こむ<br>
+        </div>
+
+        <!-- Question 36 -->
+        <div class="question">
+            <p>36. What is the meaning of "殺"?</p>
+            <input type="radio" name="q36" value="a"> a) なく<br>
+            <input type="radio" name="q36" value="b"> b) おちる<br>
+            <input type="radio" name="q36" value="c"> c) ころす<br>
+            <input type="radio" name="q36" value="d"> d) わらう<br>
+        </div>
+
+        <!-- Question 37 -->
+        <div class="question">
+            <p>37. What do we call "泣"?</p>
+            <input type="radio" name="q37" value="a"> a) おす<br>
+            <input type="radio" name="q37" value="b"> b) なげる<br>
+            <input type="radio" name="q37" value="c"> c) なく<br>
+            <input type="radio" name="q37" value="d"> d) ね<br>
+        </div>
+
+        <!-- Question 38 -->
+        <p>38. What does "投" signify?</p>
+            <input type="radio" name="q1" value="a"> a) なげる<br>
+            <input type="radio" name="q1" value="b"> b) かた<br>
+            <input type="radio" name="q1" value="c"> c) わたる<br>
+            <input type="radio" name="q1" value="d"> d) まける<br>
+        </div>
+
+        <!-- Question 39 -->
+        <div class="question">
+            <p>39. What is the meaning of "並"?</p>
+            <input type="radio" name="q2" value="a"> a) ひさしい<br>
+            <input type="radio" name="q2" value="b"> b) ならべる<br>
+            <input type="radio" name="q2" value="c"> c) しずか<br>
+            <input type="radio" name="q2" value="d"> d) よろこぶ<br>
+        </div>
+
+        <!-- Question 40 -->
+        <div class="question">
+            <p>40. What does "払" represent?</p>
+            <input type="radio" name="q3" value="a"> a) よろこぶ<br>
+            <input type="radio" name="q3" value="b"> b) ねがう<br>
+            <input type="radio" name="q3" value="c"> c) はらう<br>
+            <input type="radio" name="q3" value="d"> d) はれる<br>
+        </div>
+
+        <!-- Question 41 -->
+        <div class="question">
+            <p>41. What is the significance of "迎"?</p>
+            <input type="radio" name="q4" value="a"> a) くさ<br>
+            <input type="radio" name="q4" value="b"> b) さけ<br>
+            <input type="radio" name="q4" value="c"> c) まど<br>
+            <input type="radio" name="q4" value="d"> d) むかえる<br>
+        </div>
+
+        <!-- Question 42 -->
+        <div class="question">
+            <p>42. What does "呼" mean?</p>
+            <input type="radio" name="q5" value="a"> a) なく<br>
+            <input type="radio" name="q5" value="b"> b) よぶ<br>
+            <input type="radio" name="q5" value="c"> c) むかえる<br>
+            <input type="radio" name="q5" value="d"> d) くらべる<br>
+        </div>
+
+        <!-- Question 43 -->
+        <div class="question">
+            <p>43. What is the meaning of "渡"?</p>
+            <input type="radio" name="q6" value="a"> a) こまる<br>
+            <input type="radio" name="q6" value="b"> b) いと<br>
+            <input type="radio" name="q6" value="c"> c) つける<br>
+            <input type="radio" name="q6" value="d"> d) わたる<br>
+        </div>
+
+        <!-- Question 44 -->
+        <div class="question">
+            <p>44. What does "笑" signify?</p>
+            <input type="radio" name="q7" value="a"> a) いのち<br>
+            <input type="radio" name="q7" value="b"> b) わらう<br>
+            <input type="radio" name="q7" value="c"> c) もの<br>
+            <input type="radio" name="q7" value="d"> d) くも<br>
+        </div>
+
+        <!-- Question 45 -->
+        <div class="question">
+            <p>45. What is the significance of "効"?</p>
+            <input type="radio" name="q8" value="a"> a) いわ<br>
+            <input type="radio" name="q8" value="b"> b) こまる<br>
+            <input type="radio" name="q8" value="c"> c) きく<br>
+            <input type="radio" name="q8" value="d"> d) たすかる<br>
+        </div>
+
+        <!-- Question 46 -->
+        <div class="question">
+            <p>46. What does "困" mean?</p>
+            <input type="radio" name="q9" value="a"> a) たすかる<br>
+            <input type="radio" name="q9" value="b"> b) いち<br>
+            <input type="radio" name="q9" value="c"> c) くらべる<br>
+            <input type="radio" name="q9" value="d"> d) こまる<br>
+        </div>
+
+        <!-- Question 47 -->
+        <div class="question">
+            <p>47. What is the meaning of "助"?</p>
+            <input type="radio" name="q10" value="a"> a) さけ<br>
+            <input type="radio" name="q10" value="b"> b) わらう<br>
+            <input type="radio" name="q10" value="c"> c) もうす<br>
+            <input type="radio" name="q10" value="d"> d) たすかる<br>
+        </div>
+
+        <!-- Question 48 -->
+        <div class="question">
+            <p>48. What do we call "付"?</p>
+            <input type="radio" name="q11" value="a"> a) なげる<br>
+            <input type="radio" name="q11" value="b"> b) ひさしい<br>
+            <input type="radio" name="q11" value="c"> c) つける<br>
+            <input type="radio" name="q11" value="d"> d) ころす<br>
+        </div>
+        
+        <!-- Question 49 -->
+        <div class="question">
+            <p>49. What is the meaning of "続"?</p>
+            <input type="radio" name="q12" value="a"> a) わたる<br>
+            <input type="radio" name="q12" value="b"> b) つづく<br>
+            <input type="radio" name="q12" value="c"> c) いわ<br>
+            <input type="radio" name="q12" value="d"> d) き<br>
+        </div>
+
+        <!-- Question 50 -->
+        <div class="question">
+            <p>50. What does "届" represent?</p>
+            <input type="radio" name="q13" value="a"> a) しずか<br>
+            <input type="radio" name="q13" value="b"> b) いのち<br>
+            <input type="radio" name="q13" value="c"> c) とどける<br>
+            <input type="radio" name="q13" value="d"> d) よぶ<br>
+        </div>
+
+        <!-- Question 51 -->
+        <div class="question">
+            <p>51. What is the significance of "泊"?</p>
+            <input type="radio" name="q14" value="a"> a) くも<br>
+            <input type="radio" name="q14" value="b"> b) とどける<br>
+            <input type="radio" name="q14" value="c"> c) いち<br>
+            <input type="radio" name="q14" value="d"> d) とまる<br>
+        </div>
+
+        <!-- Question 52 -->
+        <div class="question">
+            <p>52. What does "鳴" signify?</p>
+            <input type="radio" name="q15" value="a"> a) くさ<br>
+            <input type="radio" name="q15" value="b"> b) なげる<br>
+            <input type="radio" name="q15" value="c"> c) ね<br>
+            <input type="radio" name="q15" value="d"> d) なく<br>
+        </div>
+
+        <!-- Question 53 -->
+        <div class="question">
+            <p>53. What is the meaning of "逃"?</p>
+            <input type="radio" name="q16" value="a"> a) にげる<br>
+            <input type="radio" name="q16" value="b"> b) くらべる<br>
+            <input type="radio" name="q16" value="c"> c) へる<br>
+            <input type="radio" name="q16" value="d"> d) まける<br>
+        </div>
+
+        <!-- Question 54 -->
+        <div class="question">
+            <p>54. What does "願" mean?</p>
+            <input type="radio" name="q17" value="a"> a) さけ<br>
+            <input type="radio" name="q17" value="b"> b) よろこぶ<br>
+            <input type="radio" name="q17" value="c"> c) ひさしい<br>
+            <input type="radio" name="q17" value="d"> d) ねがう<br>
+        </div>
+
+        <!-- Question 55 -->
+        <div class="question">
+            <p>55. What is the significance of "計"?</p>
+            <input type="radio" name="q18" value="a"> a) ならべる<br>
+            <input type="radio" name="q18" value="b"> b) はかる<br>
+            <input type="radio" name="q18" value="c"> c) ころす<br>
+            <input type="radio" name="q18" value="d"> d) あたたかい<br>
+        </div>
+
+        <!-- Question 56 -->
+        <div class="question">
+            <p>56. What does "晴" signify?</p>
+            <input type="radio" name="q19" value="a"> a) いそがしい<br>
+            <input type="radio" name="q19" value="b"> b) すずしい<br>
+            <input type="radio" name="q19" value="c"> c) はれる<br>
+            <input type="radio" name="q19" value="d"> d) さけ<br>
+        </div>
+
+        <!-- Question 57 -->
+        <div class="question">
+            <p>57. What is the meaning of "減"?</p>
+            <input type="radio" name="q20" value="a"> a) へる<br>
+            <input type="radio" name="q20" value="b"> b) まける<br>
+            <input type="radio" name="q20" value="c"> c) ま<br>
+            <input type="radio" name="q20" value="d"> d) あつ<br>
+        </div>
+
+        <!-- Question :58 -->
+        <div class="question">
+            <p>:58. What does "負" represent?</p>
+            <input type="radio" name="q21" value="a"> a) くさ<br>
+            <input type="radio" name="q21" value="b"> b) わたる<br>
+            <input type="radio" name="q21" value="c"> c) ま<br>
+            <input type="radio" name="q21" value="d"> d) まける<br>
+        </div>
+
+        <!-- Question 59 -->
+        <div class="question">
+            <p>59. What is the significance of "学"?</p>
+            <input type="radio" name="q22" value="a"> a) いち<br>
+            <input type="radio" name="q22" value="b"> b) しずか<br>
+            <input type="radio" name="q22" value="c"> c) まなぶ<br>
+            <input type="radio" name="q22" value="d"> d) さけ<br>
+        </div>
+
+        <!-- Question 60 -->
+        <div class="question">
+            <p>60. What does "申" mean?</p>
+            <input type="radio" name="q23" value="a"> a) いち<br>
+            <input type="radio" name="q23" value="b"> b) ひさしい<br>
+            <input type="radio" name="q23" value="c"> c) わらう<br>
+            <input type="radio" name="q23" value="d"> d) もうす<br>
+        </div>
+
+        <!-- Question 61 -->
+        <div class="question">
+            <p>61. What is the meaning of "喜"?</p>
+            <input type="radio" name="q24" value="a"> a) よろこぶ<br>
+            <input type="radio" name="q24" value="b"> b) いち<br>
+            <input type="radio" name="q24" value="c"> c) くさ<br>
+            <input type="radio" name="q24" value="d"> d) くも<br>
+        </div>
+
+        <!-- Question 62 -->
+        <div class="question">
+            <p>62. What is the meaning of "暖"?</p>
+            <input type="radio" name="q25" value="a"> a) あたたかい<br>
+            <input type="radio" name="q25" value="b"> b) こまる<br>
+            <input type="radio" name="q25" value="c"> c) すずしい<br>
+            <input type="radio" name="q25" value="d"> d) さけ<br>
+        </div>
+
+        <!-- Question 63 -->
+        <div class="question">
+            <p>63. What does "厚" signify?</p>
+            <input type="radio" name="q26" value="a"> a) あつ<br>
+            <input type="radio" name="q26" value="b"> b) いのち<br>
+            <input type="radio" name="q26" value="c"> c) さけ<br>
+            <input type="radio" name="q26" value="d"> d) いち<br>
+        </div>
+
+        <!-- Question 64 -->
+        <div class="question">
+            <p>64. What is the significance of "忙"?</p>
+            <input type="radio" name="q27" value="a"> a) いそがしい<br>
+            <input type="radio" name="q27" value="b"> b) ならべる<br>
+            <input type="radio" name="q27" value="c"> c) わたる<br>
+            <input type="radio" name="q27" value="d"> d) くらべる<br>
+        </div>
+
+        <!-- Question 65 -->
+        <div class="question">
+            <p>65. What does "悲" mean?</p>
+            <input type="radio" name="q28" value="a"> a) ひさしい<br>
+            <input type="radio" name="q28" value="b"> b) かなしい<br>
+            <input type="radio" name="q28" value="c"> c) こまる<br>
+            <input type="radio" name="q28" value="d"> d) いわ<br>
+        </div>
+
+        <!-- Question 66 -->
+        <div class="question">
+            <p>66. What is the meaning of "黄"?</p>
+            <input type="radio" name="q29" value="a"> a) き<br>
+            <input type="radio" name="q29" value="b"> b) さけ<br>
+            <input type="radio" name="q29" value="c"> c) いのち<br>
+            <input type="radio" name="q29" value="d"> d) なげる<br>
+        </div>
+
+        <!-- Question 67 -->
+        <div class="question">
+            <p>67. What does "静" represent?</p>
+            <input type="radio" name="q30" value="a"> a) しずか<br>
+            <input type="radio" name="q30" value="b"> b) くも<br>
+            <input type="radio" name="q30" value="c"> c) なく<br>
+            <input type="radio" name="q30" value="d"> d) こまる<br>
+        </div>
+
+        <!-- Question 68 -->
+        <div class="question">
+            <p>68. What is the significance of "涼"?</p>
+            <input type="radio" name="q31" value="a"> a) すずしい<br>
+            <input type="radio" name="q31" value="b"> b) くさ<br>
+            <input type="radio" name="q31" value="c"> c) わたる<br>
+            <input type="radio" name="q31" value="d"> d) むかえる<br>
+        </div>
+
+        <!-- Question 69 -->
+        <div class="question">
+            <p>69. What does "久" mean?</p>
+            <input type="radio" name="q32" value="a"> a) ひさしい<br>
+            <input type="radio" name="q32" value="b"> b) いわ<br>
+            <input type="radio" name="q32" value="c"> c) あたたかい<br>
+            <input type="radio" name="q32" value="d"> d) ころす<br>
+        </div>
+
+        <!-- Question 70 -->
+        <div class="question">
+            <p>70. What is the meaning of "難"?</p>
+            <input type="radio" name="q33" value="a"> a) むずかしい<br>
+            <input type="radio" name="q33" value="b"> b) よろこぶ<br>
+            <input type="radio" name="q33" value="c"> c) はかる<br>
+            <input type="radio" name="q33" value="d"> d) まける<br>
+        </div>
+
+        <!-- Question 71 -->
+        <div class="question">
+            <p>71. What does "真" signify?</p>
+            <input type="radio" name="q34" value="a"> a) ねがう<br>
+            <input type="radio" name="q34" value="b"> b) いち<br>
+            <input type="radio" name="q34" value="c"> c) くらべる<br>
+            <input type="radio" name="q34" value="d"> d) ま<br>
+        </div>
+
+        <!-- Question 72 -->
+        <div class="question">
+            <p>72. What is the significance of "全"?</p>
+            <input type="radio" name="q35" value="a"> a) いのち<br>
+            <input type="radio" name="q35" value="b"> b) さけ<br>
+            <input type="radio" name="q35" value="c"> c) ぜん<br>
+            <input type="radio" name="q35" value="d"> d) なく<br>
+        </div>
+
+        <!-- Question 73 -->
+        <div class="question">
+            <p>73. What does "丸" mean?</p>
+            <input type="radio" name="q36" value="a"> a) わたる<br>
+            <input type="radio" name="q36" value="b"> b) いわ<br>
+            <input type="radio" name="q36" value="c"> c) まる<br>
+            <input type="radio" name="q36" value="d"> d) き<br>
+        </div>
+
+        <!-- Question 74 -->
+        <div class="question">
+            <p>74. What is the meaning of "者"?</p>
+            <input type="radio" name="q37" value="a"> a) いち<br>
+            <input type="radio" name="q37" value="b"> b) もの<br>
+            <input type="radio" name="q37" value="c"> c) くさ<br>
+            <input type="radio" name="q37" value="d"> d) むかえる<br>
+        </div>
+
+        <!-- Question 75 -->
+        <div class="question">
+            <p>75. What does "若" represent?</p>
+            <input type="radio" name="q38" value="a"> a) ひさしい<br>
+            <input type="radio" name="q38" value="b"> b) あたたかい<br>
+            <input type="radio" name="q38" value="c"> c) よろこぶ<br>
+            <input type="radio" name="q38" value="d"> d) ならべる<br>
+        </div>
+
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <!-- Result Container -->
+        <div id="resultContainer"></div>
+    </div>
+
+    <script>
+        // JavaScript for Japanese Vocabulary Quiz
+        document.addEventListener('DOMContentLoaded', function () {
+            const quizForm = document.getElementById('quizForm');
+            const questions = document.querySelectorAll('.question');
+            const resultContainer = document.getElementById('resultContainer');
+
+            quizForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                let score = 0;
+
+                const correctAnswers = {
+            1: 'a',
+            2: 'c',
+            3: 'b',
+            4: 'b',
+            5: 'b',
+            6: 'b',
+            7: 'b',
+            8: 'b',
+            9: 'b',
+            10: 'c',
+            11: 'b',
+            12: 'b',
+            13: 'b',
+            14: 'a',
+            15: 'a',
+            16: 'c',
+            17: 'c',
+            18: 'a',
+            19: 'a',
+            20: 'b',
+            21: 'b',
+            22: 'a',
+            23: 'a',
+            24: 'd',
+            25: 'c',
+            26: 'c',
+            27: 'b',
+            28: 'c',
+            29: 'b',
+            30: 'a',
+            31: 'c',
+            32: 'a',
+            33: 'b',
+            34: 'b',
+            35: 'd',
+            36: 'c',
+            37: 'c',
+            38: 'a',
+            39: 'b',
+            40: 'c',
+            41: 'd',
+            42: 'b',
+            43: 'd',
+            44: 'b',
+            45: 'c',
+            46: 'd',
+            47: 'c',
+            48: 'c',
+            49: 'd',
+            50: 'b',
+            51: 'a',
+            52: 'a',
+            53: 'b',
+            54: 'c',
+            55: 'a',
+            56: 'a',
+            57: 'b',
+            58: 'd',
+            59: 'c',
+            60: 'd',
+            61: 'a',
+            62: 'b',
+            63: 'c',
+            64: 'a',
+            65: 'a',
+            66: 'c',
+            67: 'a',
+            68: 'b',
+            69: 'b',
+            70: 'a',
+            71: 'c',
+            72: 'c',
+            73: 'c',
+            74: 'c',
+            75: 'c',
+                };
+
+                questions.forEach((question, index) => {
+                    const selectedOption = question.querySelector('input[type="radio"]:checked');
+                    if (selectedOption) {
+                        const selectedValue = selectedOption.value;
+                        const correctOption = correctAnswers[index + 1];
+
+                        if (selectedValue === correctOption) {
+                            score++;
+                        }
+                    }
+                });
+
+                displayResult(score);
+            });
+
+            function displayResult(score) {
+                const totalQuestions = questions.length;
+
+                const percentage = (score / totalQuestions) * 100;
+
+                resultContainer.textContent = `You scored ${score} out of ${totalQuestions+1} questions (${percentage.toFixed(2)}%).`;
+            }
+        });
+    </script>
+</body>
+</html>
